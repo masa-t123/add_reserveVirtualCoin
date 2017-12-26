@@ -1,4 +1,7 @@
 <?php
+use Monolog\Handler\StreamHandler;
+use Monolog\Formatter\LineFormatter;
+use Monolog\Processor\IntrospectionProcessor;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,5 +54,23 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
+$app->configureMonologUsing(function ($monolog) use ($app) {
+    $log_path = $app->storagePath().'/logs/laravel.log';
+    $log_stream_handler = new StreamHandler($log_path);
+
+    $log_format = "[%datetime%] ".getmypid()." %channel%.%level_name%: %message% %context% %extra%\n";
+    $formatter = new LineFormatter($log_format);
+    $log_stream_handler->setFormatter($formatter);
+    $monolog->pushHandler($log_stream_handler);
+
+    $ip = new IntrospectionProcessor(
+        \Monolog\Logger::DEBUG,
+        [
+            'Monolog\\',
+            'Illuminate\\',
+        ]
+    );
+    $monolog->pushProcessor($ip);
+});
 
 return $app;
