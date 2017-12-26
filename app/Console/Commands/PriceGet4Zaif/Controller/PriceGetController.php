@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Console\Commands\PriceGet\Controller;
+namespace App\Console\Commands\PriceGet4Zaif\Controller;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
-use App\Console\Commands\PriceGet\Model\Model;
+use App\Console\Commands\PriceGet4Zaif\Model\Model;
 
 class PriceGetController extends Command
 {
@@ -35,7 +35,7 @@ class PriceGetController extends Command
     /**
      * Execute the console command.
      *
-     * @return mixed
+     * @return void
      */
     public function handle()
     {

@@ -1,12 +1,18 @@
 <?php
 
-namespace App\Console\Commands\PriceGet\Factory;
+namespace App\Console\Commands\PriceGet4Zaif\Factory;
 
-use App\Console\Commands\PriceGet\Dto\PriceListDto;
+use App\Console\Commands\PriceGet4Zaif\Dto\PriceListDto;
 use App\Library\ApiClient\ZaifApi\Zaif;
 
 class Factory
 {
+    /**
+     * Dtoの作成
+     * @param array $priceList
+     * @return PriceListDto
+     * @throws \Exception
+     */
     public function makePriceGetDto(array $priceList)
     {
         $dto = new PriceListDto();

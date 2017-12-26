@@ -1,12 +1,17 @@
 <?php
 
-namespace App\Console\Commands\PriceGet\Database;
+namespace App\Console\Commands\PriceGet4Zaif\Database;
 
-use App\Console\Commands\PriceGet\Dto\PriceListDto;
+use App\Console\Commands\PriceGet4Zaif\Dto\PriceListDto;
 use Illuminate\Support\Facades\DB;
 
 class Database
 {
+    /**
+     * 価格情報の挿入
+     * @param PriceListDto $dto
+     * @throws \Exception
+     */
     public function insPriceList(PriceListDto $dto)
     {
         $sql = <<<EOL

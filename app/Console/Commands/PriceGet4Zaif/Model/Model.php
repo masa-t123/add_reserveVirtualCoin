@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Console\Commands\PriceGet\Model;
+namespace App\Console\Commands\PriceGet4Zaif\Model;
 
-use App\Console\Commands\PriceGet\Database\Database;
-use App\Console\Commands\PriceGet\Factory\Factory;
+use App\Console\Commands\PriceGet4Zaif\Database\Database;
+use App\Console\Commands\PriceGet4Zaif\Factory\Factory;
 use App\Library\ApiClient\ZaifApi\ZaifApi;
 use App\Library\ApiClient\SlackApi\SlackApi;
 use App\Library\Common\CurrenciesName;
@@ -14,6 +14,10 @@ class Model
     {
     }
 
+    /**
+     * メイン実行
+     * @throws \Exception
+     */
     public function exec()
     {
 
@@ -39,8 +43,6 @@ class Model
         $db = new Database();
         $db->insPriceList($priceListDto);
 
-        return;
-
         // Slack通知用
         $msg = $this->makePriceMsg4Slack($priceList);
         // Slack APIの実行
@@ -57,6 +59,11 @@ class Model
 
     }
 
+    /**
+     * Slack用のメッセージを作成する。
+     * @param $priceList
+     * @return string
+     */
     private function makePriceMsg4Slack($priceList)
     {
         $msg = '';

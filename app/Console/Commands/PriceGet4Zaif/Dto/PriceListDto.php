@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\PriceGet\Dto;
+namespace App\Console\Commands\PriceGet4Zaif\Dto;
 
 class PriceListDto
 {
