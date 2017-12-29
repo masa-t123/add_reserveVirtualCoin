@@ -1,26 +1,26 @@
 <?php
 
-namespace App\Console\Commands\PriceGet4Zaif\Controller;
+namespace App\Console\Commands\AverageGet4Zaif\Controller;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
-use App\Console\Commands\PriceGet4Zaif\Model\Model;
+use App\Console\Commands\AverageGet4Zaif\Model\Model;
 
-class PriceGetController extends Command
+class AverageGetController extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'priceGet4Zaif';
+    protected $signature = 'averageGet4Zaif';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = '価格取得';
+    protected $description = '平均価格取得';
 
     /**
      * Create a new command instance.
@@ -35,13 +35,12 @@ class PriceGetController extends Command
     /**
      * Execute the console command.
      *
-     * @return void
+     * @return mixed
      */
     public function handle()
     {
         Log::info('start');
         try {
-
             $model = new Model();
             $model->exec();
         } catch (\Exception $ex) {

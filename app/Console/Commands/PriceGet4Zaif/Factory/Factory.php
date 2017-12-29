@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands\PriceGet4Zaif\Factory;
 
-use App\Console\Commands\PriceGet4Zaif\Dto\PriceListDto;
+use App\Library\Dto\ZaifDto;
 use App\Library\ApiClient\ZaifApi\Zaif;
 
 class Factory
@@ -15,12 +15,12 @@ class Factory
      */
     public function makePriceGetDto(array $priceList)
     {
-        $dto = new PriceListDto();
+        $dto = new ZaifDto();
 
         foreach ($priceList as $price) {
             foreach ($price as $key => $value) {
                 switch ($key) {
-                    case Zaif::PAIR_BTC_JPY :
+                    case Zaif::PAIR_BTC_JPY:
                         $dto->setBtc($value);
                         break;
                     case Zaif::PAIR_BCH_JPY:

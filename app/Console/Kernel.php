@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\PriceGet4Zaif\Controller\PriceGetController::class
+        Commands\PriceGet4Zaif\Controller\PriceGetController::class,
+        Commands\AverageGet4Zaif\Controller\AverageGetController::class
     ];
 
     /**

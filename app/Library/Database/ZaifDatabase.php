@@ -1,21 +1,34 @@
 <?php
 
-namespace App\Console\Commands\PriceGet4Zaif\Database;
+namespace App\Library\Database;
 
-use App\Console\Commands\PriceGet4Zaif\Dto\PriceListDto;
+use App\Library\Dto\ZaifDto;
 use Illuminate\Support\Facades\DB;
 
-class Database
+class ZaifDatabase
 {
+    const TABLE_NAME_PRICE   = 'zaif';
+    const TABLE_NAME_AVERAGE = 'zaif_average';
+
+    private $dbName;
+
+    public function __construct($dbName)
+    {
+        if(strlen($dbName) <= 0){
+            throw new \Exception('テーブル名がセットされていません');
+        }
+        $this->dbName = $dbName;
+    }
+
     /**
      * 価格情報の挿入
      * @param PriceListDto $dto
      * @throws \Exception
      */
-    public function insPriceList(PriceListDto $dto)
+    public function insPriceList(ZaifDto $dto)
     {
         $sql = <<<EOL
-insert into zaif (
+insert into $this->dbName (
 created_at,
 updated_at,
 btc,

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Console\Commands\PriceGet4Zaif\Dto;
+namespace App\Library\Dto;
 
-class PriceListDto
+class ZaifDto
 {
     private $btc;
     private $xem;

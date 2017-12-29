@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands\PriceGet4Zaif\Model;
 
-use App\Console\Commands\PriceGet4Zaif\Database\Database;
+use App\Library\Database\ZaifDatabase;
 use App\Console\Commands\PriceGet4Zaif\Factory\Factory;
 use App\Library\ApiClient\ZaifApi\ZaifApi;
 use App\Library\ApiClient\SlackApi\SlackApi;
@@ -40,7 +40,7 @@ class Model
         $priceListDto = $factory->makePriceGetDto($priceList);
 
         // DBに挿入
-        $db = new Database();
+        $db = new ZaifDatabase(ZaifDatabase::TABLE_NAME_PRICE);
         $db->insPriceList($priceListDto);
 
         // Slack通知用
