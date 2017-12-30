@@ -43,18 +43,18 @@ class Model
         $db = new ZaifDatabase(ZaifDatabase::TABLE_NAME_PRICE);
         $db->insPriceList($priceListDto);
 
-        // Slack通知用
-        $msg = $this->makePriceMsg4Slack($priceList);
-        // Slack APIの実行
-        $slack = new SlackApi(
-            \Config::get('appconfig.slackApi.token1'),
-            \Config::get('appconfig.slackApi.token2'),
-            \Config::get('appconfig.slackApi.token3')
-        );
-        $result = $slack->post(['text' => $msg]);
-        if(!$result->getIsSuccess()) {
-            throw new \Exception('Slack APIの実行に失敗しました status:'.$result->getStatusCode(). ' response:'.$result->getBody());
-        }
+//        // Slack通知用
+//        $msg = $this->makePriceMsg4Slack($priceList);
+//        // Slack APIの実行
+//        $slack = new SlackApi(
+//            \Config::get('appconfig.slackApi.token1'),
+//            \Config::get('appconfig.slackApi.token2'),
+//            \Config::get('appconfig.slackApi.token3')
+//        );
+//        $result = $slack->post(['text' => $msg]);
+//        if(!$result->getIsSuccess()) {
+//            throw new \Exception('Slack APIの実行に失敗しました status:'.$result->getStatusCode(). ' response:'.$result->getBody());
+//        }
         return;
 
     }

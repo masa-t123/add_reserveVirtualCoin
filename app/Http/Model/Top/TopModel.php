@@ -8,6 +8,7 @@ class TopModel extends Model
 {
     /**
      * トップページ表示用データの取得
+     * @return void
      */
     public function getTopData()
     {
@@ -44,10 +45,10 @@ EOF;
 
         $itemsLayout = [
             'created_at' => null,
-            'dataList' => null,
+            'dataList'   => null,
             ];
         $dataLayout = [
-            'coin' => null,
+            'coin'  => null,
             'price' => null,
             'per'   => null,
         ];
@@ -179,7 +180,7 @@ EOF;
      */
     private function calcPer($num, $ave)
     {
-        if ($num < 0) {
+        if ($num < 0 || $ave <= 0) {
             return 0;
         }
         $percent = (($num / $ave) * 100) - 100;

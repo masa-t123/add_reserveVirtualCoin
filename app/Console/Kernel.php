@@ -25,8 +25,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->command('priceGet4Zaif')->everyFiveMinutes();
+        $schedule->command('averageGet4Zaif')->daily();
     }
 
     /**

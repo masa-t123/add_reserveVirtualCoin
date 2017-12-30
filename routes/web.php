@@ -15,5 +15,8 @@
 //    return view('welcome');
 //});
 
-// 表示
+// Top-表示
 Route::get('/', 'Top\TopController@index');
+
+// About-表示
+Route::get('/about', 'About\AboutController@index');

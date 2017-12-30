@@ -8,12 +8,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'v-coin.info') }}</title>
+    <meta name="description" content="v-coin.infoは、主にZaif等の国内での仮想通貨取引所・販売所の価格表示を行っている趣味ページです" >
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}?date=<?php echo date('YmdHis') ?>" rel="stylesheet">
     <link href="{{ asset('css/vcoinapp.css')}}?date=<?php echo date('YmdHis') ?>" rel="stylesheet">
     <link href="{{ asset('css/footer.css')}}?date=<?php echo date('YmdHis') ?>" rel="stylesheet">
-
     <style>
         html, body {
             font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
@@ -32,7 +32,7 @@
 @include('layouts.footer')
 
 <!-- Javascript -->
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js') }}?date=<?php echo date('YmdHis') ?>"></script>
 </body>
 
 
