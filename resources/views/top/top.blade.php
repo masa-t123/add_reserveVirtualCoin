@@ -31,8 +31,12 @@
                             <tr class="danger">
                         @endif
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $data['coin'] }}</td>
-                        <td>{{ $data['price'] }} jpy</td>
+                        <td>
+                            <span class="icon-base icon-{{ $data['coin'] }}">
+                                <span class="coin-name">{{ $data['coin'] }}</span>
+                            </span>
+                        </td>
+                        <td>&yen;{{ $data['price'] }}</td>
                         <td>{{ $data['per'] }}%</td>
                     </tr>
                     @endforeach
@@ -41,4 +45,8 @@
         </div>
         <div class="col-sm-1"></div>
     </div>
+@endsection
+
+@section('affiliate')
+    @include('layouts.affiliate')
 @endsection

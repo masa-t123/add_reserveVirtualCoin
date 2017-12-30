@@ -141,13 +141,13 @@ EOF;
                     $itemsLayout['dataList'][] = $dataLayout;
                     break;
                 case 'cms_eth':
-                    $dataLayout['coin']  = 'COMSA(ETH)';
+                    $dataLayout['coin']  = 'COMSA-ETH';
                     $dataLayout['price'] = $this->numFormat($value);
                     $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
                     $itemsLayout['dataList'][] = $dataLayout;
                     break;
                 case 'cms_xem':
-                    $dataLayout['coin']  = 'COMSA(XEM)';
+                    $dataLayout['coin']  = 'COMSA-XEM';
                     $dataLayout['price'] = $this->numFormat($value);
                     $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
                     $itemsLayout['dataList'][] = $dataLayout;
