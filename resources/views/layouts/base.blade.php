@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'v-coin.info') }}</title>
+    <title>{{ config('app.name', 'v-coin.info') }}@yield('pagename')</title>
     <meta name="description" content="v-coin.infoは、主にZaif等の国内での仮想通貨取引所・販売所の価格表示を行っている趣味ページです" >
 
     <!-- Styles -->

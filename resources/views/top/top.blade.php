@@ -1,4 +1,4 @@
-@extends('Layouts.base')
+@extends('layouts.base')
 
 @section('content')
     <div class="row">
@@ -6,10 +6,11 @@
         <div class="col-sm-2">
             <span class="label label-success">Zaif</span>
         </div>
-        <div class="col-sm-6">&nbsp;</div>
-        <div class="col-sm-3">
+        <div class="col-sm-5">&nbsp;</div>
+        <div class="col-sm-3 text-right get-data-date">
             {{ $items['created_at'] }}
         </div>
+        <div class="col-sm-1"></div>
     </div>
     <div class="row">
         <div class="col-sm-1"></div>
@@ -25,7 +26,9 @@
                 </thead>
                 <tbody>
                     @foreach ($items['dataList'] as $data)
-                        @if ($data['per'] > 0)
+                        @if ($data['per'] == 0)
+                            <tr>
+                        @elseif ($data['per'] > 0)
                             <tr class="success">
                         @else
                             <tr class="danger">

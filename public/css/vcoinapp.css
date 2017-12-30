@@ -67,6 +67,10 @@
     background-repeat: no-repeat;
 }
 
+.get-data-date {
+    font-size:10px;
+}
+
 .coin-name {
     margin-left:25px;
 }

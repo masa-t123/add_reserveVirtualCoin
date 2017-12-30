@@ -1,4 +1,8 @@
-@extends('Layouts.base')
+@extends('layouts.base')
+
+@section('pagename')
+ - About
+@endsection
 
 @section('content')
     <div class="about-layout">
