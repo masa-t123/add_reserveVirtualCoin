@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
     @include('layouts.analytics')
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
 
 @yield('content')
 
-@yield('affiliate')
+@include('layouts.affiliate')
 
 @include('layouts.footer')
 
