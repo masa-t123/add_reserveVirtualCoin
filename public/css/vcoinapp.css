@@ -1,0 +1,80 @@
+.icon-base {
+    width: 24px;
+    height: 24px;
+}
+.icon-BTC {
+    background-image: url('../image/coin/btc.png');
+    background-repeat: no-repeat;
+}
+.icon-XEM {
+    background: url('../image/coin/nem.png');
+    background-repeat: no-repeat;
+}
+.icon-MONA {
+    background: url('../image/coin/mona.png');
+    background-repeat: no-repeat;
+}
+.icon-BCH {
+    background: url('../image/coin/bch.png');
+    background-repeat: no-repeat;
+}
+.icon-ETH {
+    background: url('../image/coin/eth.png');
+    background-repeat: no-repeat;
+}
+.icon-ZAIF {
+    background: url('../image/coin/zaif.png');
+    background-repeat: no-repeat;
+}
+.icon-XCP {
+    background: url('../image/coin/xcp.png');
+    background-repeat: no-repeat;
+}
+.icon-BCY {
+    background: url('../image/coin/bcy.png');
+    background-repeat: no-repeat;
+}
+.icon-SJCX {
+    background: url('../image/coin/sjcx.png');
+    background-repeat: no-repeat;
+}
+.icon-FSCC {
+    background: url('../image/coin/fscc.png');
+    background-repeat: no-repeat;
+}
+.icon-PEPECASH {
+    background: url('../image/coin/pepecash.png');
+    background-repeat: no-repeat;
+}
+.icon-CICC {
+    background: url('../image/coin/cicc.png');
+    background-repeat: no-repeat;
+}
+.icon-NCXC {
+    background: url('../image/coin/ncxc.png');
+    background-repeat: no-repeat;
+}
+.icon-JPYZ {
+    background: url('../image/coin/jpyz.png');
+    background-repeat: no-repeat;
+}
+.icon-COMSA-ETH {
+    background: url('../image/coin/comsa.png');
+    background-repeat: no-repeat;
+}
+.icon-COMSA-XEM {
+    background: url('../image/coin/comsa.png');
+    background-repeat: no-repeat;
+}
+
+.get-data-date {
+    font-size:10px;
+}
+
+.coin-name {
+    margin-left:25px;
+}
+
+.about-layout {
+    margin-left: 30px;
+}

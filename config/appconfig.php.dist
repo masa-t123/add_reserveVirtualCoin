@@ -1,0 +1,18 @@
+<?php
+
+return [
+
+    // zaif Token
+    'zaifToken' => [
+        'key'    => '',
+        'secret' => '',
+    ],
+
+    // Slack API
+    'slackApi' => [
+        'token1' => '',
+        'token2' => '',
+        'token3' => '',
+
+    ],
+];
