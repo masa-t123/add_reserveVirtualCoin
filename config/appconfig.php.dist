@@ -8,6 +8,12 @@ return [
         'secret' => '',
     ],
 
+    // CoinCheck Token
+    'coinCheckToken' => [
+        'key' => '',
+        'secret' => '',
+    ],
+
     // Slack API
     'slackApi' => [
         'token1' => '',
