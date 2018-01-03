@@ -6,31 +6,38 @@ use Illuminate\Support\Facades\DB;
 
 class TopModel extends Model
 {
+    private $getList = ['zaif','coincheck'];
+
     /**
      * トップページ表示用データの取得
      * @return void
      */
     public function getTopData()
     {
-        // 最新データ取得
-        $sql = <<< EOF
+        $result = [];
+
+        foreach ($this->getList as $list) {
+            // 最新データ取得
+            $table = $list;
+            $sql = <<< EOF
 select *
-from zaif
+from $table
 order by id desc limit 1
 EOF;
-        $latestData = DB::select($sql);
-        $latestData = array_shift($latestData);
+            $latestData = DB::select($sql);
+            $latestData = array_shift($latestData);
 
-        // 平均データ取得
-        $sql = <<< EOF
+            // 平均データ取得
+            $table = "{$list}_average";
+            $sql = <<< EOF
 select *
-from zaif_average
+from $table
 order by id desc limit 1
 EOF;
-        $averageData = DB::select($sql);
-        $averageData = array_shift($averageData);
-
-        $result = $this->makeViewData($latestData, $averageData);
+            $averageData = DB::select($sql);
+            $averageData = array_shift($averageData);
+            $result[$list] = $this->makeViewData($latestData, $averageData);
+        }
 
         return $result;
     }
@@ -83,6 +90,60 @@ EOF;
                     break;
                 case 'eth':
                     $dataLayout['coin']  = 'ETH';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'etc':
+                    $dataLayout['coin']  = 'ETC';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'lsk':
+                    $dataLayout['coin']  = 'LSK';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'fct':
+                    $dataLayout['coin']  = 'FCT';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'xmr':
+                    $dataLayout['coin']  = 'XMR';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'rep':
+                    $dataLayout['coin']  = 'REP';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'xrp':
+                    $dataLayout['coin']  = 'XRP';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'zec':
+                    $dataLayout['coin']  = 'ZEC';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'ltc':
+                    $dataLayout['coin']  = 'LTC';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'dash':
+                    $dataLayout['coin']  = 'DASH';
                     $dataLayout['price'] = $this->numFormat($value);
                     $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
                     $itemsLayout['dataList'][] = $dataLayout;
