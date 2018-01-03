@@ -35,6 +35,7 @@
 
 <!-- Javascript -->
 <script src="{{ asset('js/app.js') }}?date=<?php echo date('YmdHis') ?>"></script>
+<script src="{{ asset('js/vcoinapp.js') }}?date=<?php echo date('YmdHis') ?>"></script>
 </body>
 
 

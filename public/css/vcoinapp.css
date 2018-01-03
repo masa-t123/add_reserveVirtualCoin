@@ -22,6 +22,42 @@
     background: url('../image/coin/eth.png');
     background-repeat: no-repeat;
 }
+.icon-ETC {
+    background: url('../image/coin/etc.png');
+    background-repeat: no-repeat;
+}
+.icon-LSK {
+    background: url('../image/coin/lsk.png');
+    background-repeat: no-repeat;
+}
+.icon-FCT {
+    background: url('../image/coin/fct.png');
+    background-repeat: no-repeat;
+}
+.icon-XMR {
+    background: url('../image/coin/xmr.png');
+    background-repeat: no-repeat;
+}
+.icon-REP {
+    background: url('../image/coin/rep.png');
+    background-repeat: no-repeat;
+}
+.icon-XRP {
+    background: url('../image/coin/xrp.png');
+    background-repeat: no-repeat;
+}
+.icon-ZEC {
+    background: url('../image/coin/zec.png');
+    background-repeat: no-repeat;
+}
+.icon-LTC {
+    background: url('../image/coin/ltc.png');
+    background-repeat: no-repeat;
+}
+.icon-DASH {
+    background: url('../image/coin/dash.png');
+    background-repeat: no-repeat;
+}
 .icon-ZAIF {
     background: url('../image/coin/zaif.png');
     background-repeat: no-repeat;
