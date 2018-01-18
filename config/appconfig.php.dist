@@ -2,6 +2,12 @@
 
 return [
 
+    // bitflyer Token
+    'bitFlyerToken' => [
+        'key'    => '',
+        'secret' => '',
+    ],
+
     // zaif Token
     'zaifToken' => [
         'key'    => '',

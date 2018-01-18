@@ -14,7 +14,11 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\PriceGet4Zaif\Controller\PriceGetController::class,
-        Commands\AverageGet4Zaif\Controller\AverageGetController::class
+        Commands\AverageGet4Zaif\Controller\AverageGetController::class,
+        Commands\PriceGet4CoinCheck\Controller\PriceGetController::class,
+        Commands\AverageGet4CoinCheck\Controller\AverageGetController::class,
+        Commands\PriceGet4BitFlyer\Controller\PriceGetController::class,
+        Commands\AverageGet4BitFlyer\Controller\AverageGetController::class,
     ];
 
     /**
@@ -27,8 +31,10 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('priceGet4Zaif')->everyFiveMinutes();
         $schedule->command('priceGet4cc')->everyFiveMinutes();
+        $schedule->command('priceGet4bf')->everyFiveMinutes();
         $schedule->command('averageGet4Zaif')->daily();
         $schedule->command('averageGet4cc')->daily();
+        $schedule->command('averageGet4bf')->daily();
     }
 
     /**

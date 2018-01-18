@@ -1,5 +1,5 @@
 <?php
-namespace App\Console\Commands\AverageGet4Zaif\Database;
+namespace App\Console\Commands\AverageGet4BitFlyer\Database;
 
 use Illuminate\Support\Facades\DB;
 
@@ -14,13 +14,13 @@ class Database
 
         $sql = <<<EOF
 select * 
-from zaif
+from bitflyer
 where created_at > '$yesterday'
 and created_at <= '$today'
 EOF;
         $result = DB::select($sql);
         if(!$result) {
-            throw new \Exception('DBエラー：'.$result);
+            throw new \Exception('DB ERROR!');
         }
         return $result;
     }
