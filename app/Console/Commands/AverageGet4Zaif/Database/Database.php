@@ -20,7 +20,6 @@ and created_at <= '$today'
 EOF;
         $result = DB::select($sql);
         if(!$result) {
-            DB::rollback();
             throw new \Exception('DBエラー：'.$result);
         }
         return $result;
