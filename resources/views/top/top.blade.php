@@ -7,6 +7,7 @@
             <button type="button" id="disp-all"  class="btn btn-default">All</button>
             <button type="button" id="disp-zaif" class="btn btn-info">Zaif</button>
             <button type="button" id="disp-cc"   class="btn btn-success">CoinCheck</button>
+            <button type="button" id="disp-bf"   class="btn btn-primary">BitFlyer</button>
         </div>
         <div class="col-sm-1"></div>
     </div>
@@ -14,6 +15,8 @@
     @include('top.parts.zaif')
 
     @include('top.parts.coincheck')
+
+    @include('top.parts.bitflyer')
 @endsection
 
 @section('affiliate')
