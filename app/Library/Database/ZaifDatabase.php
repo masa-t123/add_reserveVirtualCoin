@@ -100,4 +100,21 @@ EOL;
         return;
 
     }
+
+    /**
+     * BTCの最新価格取得
+     * @return double $latestData
+     */
+    public function getBtcPrice()
+    {
+        $sql = <<< EOF
+select btc
+from $this->dbName
+order by id desc limit 1
+EOF;
+        $latestData = DB::select($sql);
+        $latestData = array_shift($latestData);
+
+        return $latestData->btc;
+    }
 }

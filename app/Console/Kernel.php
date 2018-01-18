@@ -19,6 +19,7 @@ class Kernel extends ConsoleKernel
         Commands\AverageGet4CoinCheck\Controller\AverageGetController::class,
         Commands\PriceGet4BitFlyer\Controller\PriceGetController::class,
         Commands\AverageGet4BitFlyer\Controller\AverageGetController::class,
+        Commands\PriceGet4Binance\Controller\PriceGetController::class,
     ];
 
     /**
