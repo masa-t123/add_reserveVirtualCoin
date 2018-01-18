@@ -6,7 +6,11 @@ use Illuminate\Support\Facades\DB;
 
 class TopModel extends Model
 {
-    private $getList = ['zaif','coincheck'];
+    private $getList = [
+        'zaif',
+        'coincheck',
+        'bitflyer',
+    ];
 
     /**
      * トップページ表示用データの取得
@@ -66,6 +70,12 @@ EOF;
                     break;
                 case 'btc':
                     $dataLayout['coin']  = 'BTC';
+                    $dataLayout['price'] = $this->numFormat($value);
+                    $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
+                    $itemsLayout['dataList'][] = $dataLayout;
+                    break;
+                case 'fx_btc':
+                    $dataLayout['coin']  = 'FX_BTC';
                     $dataLayout['price'] = $this->numFormat($value);
                     $dataLayout['per']   = $this->calcPer($value, $averageData->$key);
                     $itemsLayout['dataList'][] = $dataLayout;
