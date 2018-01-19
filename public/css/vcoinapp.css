@@ -106,6 +106,78 @@
     background: url('../image/coin/comsa.png');
     background-repeat: no-repeat;
 }
+.icon-BNB {
+    background: url('../image/coin/bnb.png');
+    background-repeat: no-repeat;
+}
+.icon-NEO {
+    background: url('../image/coin/neo.png');
+    background-repeat: no-repeat;
+}
+.icon-BCC {
+    background: url('../image/coin/bcc.png');
+    background-repeat: no-repeat;
+}
+.icon-GAS {
+    background: url('../image/coin/gas.png');
+    background-repeat: no-repeat;
+}
+.icon-HSR {
+    background: url('../image/coin/hsr.png');
+    background-repeat: no-repeat;
+}
+.icon-MCO {
+    background: url('../image/coin/mco.png');
+    background-repeat: no-repeat;
+}
+.icon-WTC {
+    background: url('../image/coin/wtc.png');
+    background-repeat: no-repeat;
+}
+.icon-LRC {
+    background: url('../image/coin/lrc.png');
+    background-repeat: no-repeat;
+}
+.icon-QTUM {
+    background: url('../image/coin/qtum.png');
+    background-repeat: no-repeat;
+}
+.icon-YOYO {
+    background: url('../image/coin/yoyo.png');
+    background-repeat: no-repeat;
+}
+.icon-OMG {
+    background: url('../image/coin/omg.png');
+    background-repeat: no-repeat;
+}
+.icon-ZRX {
+    background: url('../image/coin/zrx.png');
+    background-repeat: no-repeat;
+}
+.icon-STRAT {
+    background: url('../image/coin/strat.png');
+    background-repeat: no-repeat;
+}
+.icon-SNGLS {
+    background: url('../image/coin/sngls.png');
+    background-repeat: no-repeat;
+}
+.icon-BQX {
+    background: url('../image/coin/bqx.png');
+    background-repeat: no-repeat;
+}
+.icon-KNC {
+    background: url('../image/coin/knc.png');
+    background-repeat: no-repeat;
+}
+.icon-FUN {
+    background: url('../image/coin/fun.png');
+    background-repeat: no-repeat;
+}
+.icon-SNM {
+    background: url('../image/coin/snm.png');
+    background-repeat: no-repeat;
+}
 
 .get-data-date {
     font-size:10px;
