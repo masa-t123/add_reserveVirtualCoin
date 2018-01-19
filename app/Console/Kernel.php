@@ -19,6 +19,8 @@ class Kernel extends ConsoleKernel
         Commands\AverageGet4CoinCheck\Controller\AverageGetController::class,
         Commands\PriceGet4BitFlyer\Controller\PriceGetController::class,
         Commands\AverageGet4BitFlyer\Controller\AverageGetController::class,
+        Commands\PriceGet4Binance\Controller\PriceGetController::class,
+        Commands\AverageGet4Binance\Controller\AverageGetController::class,
     ];
 
     /**
@@ -32,9 +34,11 @@ class Kernel extends ConsoleKernel
         $schedule->command('priceGet4Zaif')->everyFiveMinutes();
         $schedule->command('priceGet4cc')->everyFiveMinutes();
         $schedule->command('priceGet4bf')->everyFiveMinutes();
+        $schedule->command('priceGet4binance')->everyFiveMinutes();
         $schedule->command('averageGet4Zaif')->daily();
         $schedule->command('averageGet4cc')->daily();
         $schedule->command('averageGet4bf')->daily();
+        $schedule->command('averageGet4binance')->daily();
     }
 
     /**
