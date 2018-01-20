@@ -1,5 +1,5 @@
 <div id="binance">
-    <div class="row">
+    <div class="row row-margin">
         <div class="col-sm-1"></div>
         <div class="col-sm-2">
             <span class="label label-warning">Binance</span>
@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-            <table class="table table-striped table-hover">
+            <table id="binance-table" class="table table-striped table-hover">
                 <thead>
                 <tr>
                     <th>#</th>

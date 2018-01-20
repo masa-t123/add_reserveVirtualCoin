@@ -14,6 +14,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}?date=<?php echo date('YmdHis') ?>" rel="stylesheet">
+    <link href="https://cdn.datatables.net/v/bs4/jqc-1.12.3/dt-1.10.16/datatables.min.css" rel="stylesheet"/>
     <link href="{{ asset('css/vcoinapp.css')}}?date=<?php echo date('YmdHis') ?>" rel="stylesheet">
     <link href="{{ asset('css/footer.css')}}?date=<?php echo date('YmdHis') ?>" rel="stylesheet">
     <style>
@@ -34,9 +35,9 @@
 @include('layouts.footer')
 
 <!-- Javascript -->
-<script src="{{ asset('js/app.js') }}?date=<?php echo date('YmdHis') ?>"></script>
-<script src="{{ asset('js/vcoinapp.js') }}?date=<?php echo date('YmdHis') ?>"></script>
+<script src="{{ asset('js/app.js') }}?date=<?php echo date('YmdHis') ?>" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js" type="text/javascript"></script>
+<script src="{{ asset('js/vcoinapp.js') }}?date=<?php echo date('YmdHis') ?>" type="text/javascript"></script>
 </body>
-
 
 </html>
